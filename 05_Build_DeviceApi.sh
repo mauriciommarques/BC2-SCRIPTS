@@ -6,7 +6,7 @@
 # Detecta o diretório do script
 # =========================
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SOURCE_DIR="$SCRIPT_DIR/source"
+SOURCE_DIR="$(cd "$SCRIPT_DIR/../source" && pwd)"
 PROJECT_DIR="$SOURCE_DIR/BC2Scan.DeviceApi"
 BUILD_OUTPUT="/tmp/bc2scan_deviceapi_publish"
 

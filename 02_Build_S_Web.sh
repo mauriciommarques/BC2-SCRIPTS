@@ -3,7 +3,7 @@
 # Autor: Maurício
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SOURCE_DIR="$SCRIPT_DIR/source"
+SOURCE_DIR="$(cd "$SCRIPT_DIR/../source" && pwd)"
 BUILD_OUTPUT="/tmp/bc2scan_publish"
 
 RED='\033[0;31m'

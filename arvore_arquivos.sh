@@ -1,7 +1,8 @@
 #!/bin/bash
 # arvore_arquivos.sh - Exibe a árvore limpa do BC2Scan pós-refatoração com RabbitMQ
 
-ROOT_DIR="$(dirname "$0")/source"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/../source" && pwd)"
 
 # Checa se o comando tree está instalado
 if ! command -v tree &> /dev/null; then

@@ -5,9 +5,9 @@
 # =========================
 # Detecta o diretório do script
 # =========================
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"    # diretório onde o script está
-SOURCE_DIR="$SCRIPT_DIR/source"                # pasta source relativa ao script
-API_DIR="$SOURCE_DIR/BC2Scan.Api"             # API dentro de source
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SOURCE_DIR="$(cd "$SCRIPT_DIR/../source" && pwd)"
+API_DIR="$SOURCE_DIR/BC2Scan.Api"
 BUILD_OUTPUT="/tmp/bc2scan_api_publish"
 
 # Cores para log
