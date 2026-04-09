@@ -35,11 +35,11 @@ sudo systemctl stop $SERVICE_WEB || true
 # Copiar binários direto para /opt
 # -------------------------
 log "Copiando binários API..."
-scp -P "$REMOTE_PORT" -r "$LOCAL_BUILD_DIR/api/"* \
+scp -O -P "$REMOTE_PORT" -r "$LOCAL_BUILD_DIR/api/"* \
 "$REMOTE_USER@$REMOTE_IP:$REMOTE_DIR_API/"
 
 log "Copiando binários Web..."
-scp -P "$REMOTE_PORT" -r "$LOCAL_BUILD_DIR/web/"* \
+scp -O -P "$REMOTE_PORT" -r "$LOCAL_BUILD_DIR/web/"* \
 "$REMOTE_USER@$REMOTE_IP:$REMOTE_DIR_WEB/"
 
 # -------------------------

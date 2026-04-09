@@ -33,7 +33,7 @@ sudo systemctl stop $SERVICE_NAME || true
 # Copiar binários direto para /opt
 # =========================
 log "Copiando binários para o servidor remoto..."
-scp -P "$REMOTE_PORT" -r "$LOCAL_BUILD_DIR/"* \
+scp -O -P "$REMOTE_PORT" -r "$LOCAL_BUILD_DIR/"* \
 "$REMOTE_USER@$REMOTE_IP:$REMOTE_DIR/" || {
     error "Falha ao copiar arquivos via scp."
     exit 1
